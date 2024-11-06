@@ -1,0 +1,97 @@
+buildings:
+  - name: MAT
+    classes: 9
+    position:
+      x: 100
+      y: 100
+  - name: SCI
+    classes: 12
+    position:
+      x: 300
+      y: 100
+  - name: LANG
+    classes: 8
+    position:
+      x: 500
+      y: 100
+  - name: MISC
+    classes: 9
+    position:
+      x: 100
+      y: 300
+  - name: ART
+    classes: 9
+    position:
+      x: 300
+      y: 300
+  - name: S
+    classes: 9
+    position:
+      x: 500
+      y: 300
+
+classrooms:
+  MAT001: {x: 110, y: 110}
+  MAT102: {x: 160, y: 110}
+  MAT201: {x: 110, y: 160}
+  MAT007: {x: 160, y: 160}
+  MAT008: {x: 110, y: 210}
+  MAT009: {x: 160, y: 210}
+  MAT004: {x: 110, y: 260}
+  MAT005: {x: 160, y: 260}
+  MAT006: {x: 110, y: 310}
+  SCI001: {x: 310, y: 110}
+  SCI002: {x: 360, y: 110}
+  SCI003: {x: 410, y: 110}
+  SCI004: {x: 310, y: 160}
+  SCI005: {x: 360, y: 160}
+  SCI006: {x: 410, y: 160}
+  SCI007: {x: 310, y: 210}
+  SCI008: {x: 360, y: 210}
+  SCI009: {x: 410, y: 210}
+  SCI010: {x: 310, y: 260}
+  SCI011: {x: 360, y: 260}
+  SCI012: {x: 410, y: 260}
+  LANG001: {x: 510, y: 110}
+  LANG002: {x: 560, y: 110}
+  LANG003: {x: 510, y: 160}
+  LANG004: {x: 560, y: 160}
+  LANG005: {x: 510, y: 210}
+  LANG006: {x: 560, y: 210}
+  LANG007: {x: 510, y: 260}
+  LANG008: {x: 560, y: 260}
+  MISC001: {x: 110, y: 310}
+  MISC002: {x: 160, y: 310}
+  MISC003: {x: 110, y: 360}
+  MISC004: {x: 160, y: 360}
+  MISC005: {x: 110, y: 410}
+  MISC006: {x: 160, y: 410}
+  MISC007: {x: 110, y: 460}
+  MISC008: {x: 160, y: 460}
+  MISC010: {x: 110, y: 510}
+  ART001: {x: 310, y: 310}
+  ART002: {x: 360, y: 310}
+  ART003: {x: 410, y: 310}
+  ART004: {x: 310, y: 360}
+  ART005: {x: 360, y: 360}
+  ART006: {x: 410, y: 360}
+  ART007: {x: 310, y: 410}
+  ART008: {x: 360, y: 410}
+  ART009: {x: 410, y: 410}
+  S001: {x: 510, y: 310}
+  S002: {x: 560, y: 310}
+  S003: {x: 510, y: 360}
+  S004: {x: 560, y: 360}
+  S005: {x: 510, y: 410}
+  S006: {x: 560, y: 410}
+  S007: {x: 510, y: 460}
+  S008: {x: 560, y: 460}
+  S009: {x: 510, y: 510}
+
+class_sizes:
+  width: 40
+  height: 30
+
+map_size:
+  width: 700
+  height: 600
