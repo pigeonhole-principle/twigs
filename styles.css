@@ -1,0 +1,38 @@
+/* Previous CSS styles remain the same */
+
+#mapSvg {
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    display: block;
+}
+
+.building {
+    fill: #f0f0f0;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+.building-label {
+    font-size: 14px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.class-box {
+    fill: #fff;
+    stroke: #999;
+    stroke-width: 1;
+}
+
+.path {
+    fill: none;
+    stroke: red;
+    stroke-width: 2;
+    stroke-dasharray: 5;
+    stroke-dashoffset: 5;
+}
+
+#scheduleDisplay {
+    margin-top: 20px;
+    text-align: center;
+}
