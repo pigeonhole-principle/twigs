@@ -4,125 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Schedule Simulator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        #startScreen, #messageScreen, #buttonScreen, #courseSelectionScreen, #mapScreen {
-            text-align: center;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        button {
-            font-size: 1.2em;
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        #message {
-            font-size: 1.5em;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-        #description {
-            position: fixed;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: #777;
-            font-style: italic;
-        }
-        .subject-group {
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .course-select {
-            width: 300px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            background-color: white;
-            cursor: pointer;
-            color: gray;
-            margin-right: 10px;
-        }
-        .add-course-button {
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .course-options {
-            display: none;
-            position: absolute;
-            width: 300px;
-            max-height: 200px;
-            overflow-y: auto;
-            border: 1px solid #ccc;
-            background-color: white;
-            z-index: 1000;
-        }
-        .course-option {
-            padding: 5px;
-            cursor: pointer;
-        }
-        .course-option:hover {
-            background-color: #f0f0f0;
-        }
-        #selectedCourses {
-            margin-top: 20px;
-        }
-        #selectedCourses li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-        .delete-course {
-            cursor: pointer;
-            color: red;
-            margin-left: 10px;
-        }
-        #mapSvg {
-            border: 1px solid #ccc;
-            margin: 20px auto;
-            display: block;
-        }
-        .building {
-            fill: #f0f0f0;
-            stroke: #333;
-            stroke-width: 2;
-        }
-        .building-label {
-            font-size: 14px;
-            font-weight: bold;
-            text-anchor: middle;
-        }
-        .class-box {
-            fill: #fff;
-            stroke: #999;
-            stroke-width: 1;
-        }
-        .path {
-            fill: none;
-            stroke: red;
-            stroke-width: 2;
-            stroke-dasharray: 5;
-            stroke-dashoffset: 5;
-        }
-        #scheduleDisplay {
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 <body>
     <div id="startScreen">
@@ -141,7 +24,8 @@
 
     <div id="courseSelectionScreen" style="display: none;">
         <h2>Select Your Courses</h2>
-        
+
+        <!-- Language Course Selection -->
         <div class="subject-group">
             <h3>Language</h3>
             <div class="course-select" id="languageSelect">Select a Language course</div>
@@ -149,6 +33,7 @@
             <div class="course-options" id="languageOptions"></div>
         </div>
 
+        <!-- Mathematics Course Selection -->
         <div class="subject-group">
             <h3>Mathematics</h3>
             <div class="course-select" id="mathematicsSelect">Select a Mathematics course</div>
@@ -156,6 +41,7 @@
             <div class="course-options" id="mathematicsOptions"></div>
         </div>
 
+        <!-- Social Studies Course Selection -->
         <div class="subject-group">
             <h3>Social Studies</h3>
             <div class="course-select" id="socialStudiesSelect">Select a Social Studies course</div>
@@ -163,6 +49,7 @@
             <div class="course-options" id="socialStudiesOptions"></div>
         </div>
 
+        <!-- Sciences Course Selection -->
         <div class="subject-group">
             <h3>Sciences</h3>
             <div class="course-select" id="sciencesSelect">Select a Sciences course</div>
@@ -170,6 +57,7 @@
             <div class="course-options" id="sciencesOptions"></div>
         </div>
 
+        <!-- Electives Course Selection -->
         <div class="subject-group">
             <h3>Electives</h3>
             <div class="course-select" id="electivesSelect">Select an Elective course</div>
@@ -177,23 +65,27 @@
             <div class="course-options" id="electivesOptions"></div>
         </div>
 
+        <!-- Selected Courses Display -->
         <div id="selectedCourses">
             <h3>Selected Courses: <span id="courseCount">0</span>/8</h3>
             <ul id="courseList"></ul>
         </div>
 
+        <!-- Optimize Button -->
         <button id="optimizeButton" style="display: none;">Optimize Now!</button>
     </div>
 
+    <!-- Map Screen for Optimized Schedule -->
     <div id="mapScreen" style="display: none;">
         <h2>Optimized Schedule Map</h2>
-        <svg id="mapSvg" width="700" height="400"></svg>
+        <svg id="mapSvg" width="800" height="650"></svg>
         <div id="scheduleDisplay"></div>
     </div>
 
+    <!-- Schedule Description -->
     <div id="description"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Link to the JavaScript file -->
+    <script src="./script.js"></script> <!-- Ensure the path is correct -->
 </body>
 </html>
