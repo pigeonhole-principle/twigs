@@ -1,4 +1,103 @@
-/* Previous CSS styles remain the same */
+body {
+    font-family: Monaco, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #b9e5cf;
+}
+
+#startScreen, #messageScreen, #buttonScreen, #courseSelectionScreen, #mapScreen {
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#message {
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#description {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+.subject-group {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-select {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    color: gray;
+    margin-right: 10px;
+}
+
+.add-course-button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.course-options {
+    display: none;
+    position: absolute;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 1000;
+}
+
+.course-option {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.course-option:hover {
+    background-color: #f0f0f0;
+}
+
+#selectedCourses {
+    margin-top: 20px;
+}
+
+#selectedCourses li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.delete-course {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
 
 #mapSvg {
     border: 1px solid #ccc;
@@ -24,6 +123,12 @@
     stroke-width: 1;
 }
 
+.class-label {
+    font-size: 10px;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
 .path {
     fill: none;
     stroke: red;
@@ -32,7 +137,19 @@
     stroke-dashoffset: 5;
 }
 
+.path-label {
+    font-size: 12px;
+    fill: red;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
 #scheduleDisplay {
     margin-top: 20px;
     text-align: center;
+}
+
+#scheduleDisplay ol {
+    display: inline-block;
+    text-align: left;
 }
